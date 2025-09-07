@@ -8,7 +8,7 @@ pipeline
    }
    stage('done'){
     steps {
-	  bat'"c:\\windows\\system32\\cmd.exe"\c python demo.py 
+	  bat'"C:\Users\DEEVA\demo-jenkins" demo.py' 
 	  }
   }
   }

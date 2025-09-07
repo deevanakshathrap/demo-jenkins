@@ -1,15 +1,10 @@
-pipeline
- agent any
- stages
-   stages('version'){
-    steps{
-	  bat'"c:\\windows\\system32\\cmd.exe"/c python --version'
-	  }
-   }
-   stage('done'){
-    steps {
-	  bat'"c:\\windows\\system32\\cmd.exe" /c python demo.py 
-	  }
-  }
-  }
- }
+pipeline {
+    agent any
+    stages {
+        stage('Run Python Script') {
+            steps {
+                bat 'python demo.py'
+            }
+        }
+    }
+}
